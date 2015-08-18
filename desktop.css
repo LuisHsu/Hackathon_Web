@@ -6,61 +6,72 @@ body{
 }
 
 #nav-fix{
-	width:40px;top:38%;position:fixed;left:0;z-index:9999
+	width:auto;top:30%;position:fixed;left:0;z-index:9999
 }
 
 #nav-fix li{
-	height:20px;width:20px;border-radius:50%;box-shadow:inset 0 0 5px #000;margin:10px;list-style:none;position:relative;transition:all 250ms ease;color:#fff
+	height:30px;
+	width:30px;
+	border-radius:50%;
+	box-shadow:inset 0 0 5px #000;
+	margin:10px;
+	list-style:none;
+	position:relative;
+	transition:all 250ms ease;
+	color:#FFF;
+	background:rgba(0,0,0,1);
 }
 
 #nav-fix li span{
 	position:relative;
 	background:#000;
-	font-family:"Trebuchet MS",Arial, Helvetica, sans-serif;font-size:13px;
-	height:24px;
+	font-family:"Trebuchet MS",Arial, Helvetica, sans-serif;font-size:15px;
+	height:30px;
 	border-radius:2px;
 	width:90px;
 	text-align:center;
-	line-height:24px;
-	margin-left:40px;
-	top:-22px;
+	line-height:30px;
+	margin-left:50px;
+	top:-29px;
 	display:block;
 	transition:all 250ms ease;
-	opacity:0
 }
 
 #nav-fix li span:after{
 	content:'';
 	position:absolute;
-	height:10px;
-	width:10px;
+	height:12px;
+	width:12px;
 	-webkit-transform:rotate(45deg);
 	-moz-transform:rotate(45deg);
 	-ms-transform:rotate(45deg);
 	transform:rotate(45deg);
-	left:-4px;
+	left:-6px;
+	margin-top:2px;
 	background:#000;top:7px
 }
 
 #nav-fix li:hover span{
-	margin-left:30px;opacity:1
+	margin-left:40px;opacity:1
 }
 
 #nav-fix li label{
-	display:block;cursor:pointer;height:20px;width:20px
+	display:block;cursor:pointer;height:30px;width:30px
 }
 
 #nav-fix li label i.fa{
-	height:20px;width:20px;text-align:center;line-height:20px;font-size:10px
+	height:30px;width:30px;text-align:center;line-height:30px;font-size:15px
 }
 
 .tab{
 	height:100%;width:100%;position:fixed;transition:all 1000ms ease;
+	
 	//padding:30px 50px;box-sizing:border-box;
 }
 
 .tab1{
-	background:#FF0;left:0%
+	background:url(tw9.jpg)#FF0;left:0%;
+	background-size:cover;
 }
 
 .tab2{
@@ -82,39 +93,31 @@ input[type="radio"]{display:none}
 #tab2:checked~#nav-fix li:nth-child(2),
 #tab3:checked~#nav-fix li:nth-child(3),
 #tab4:checked~#nav-fix li:nth-child(4){
-	box-shadow:inset 0 0 15px #000
+	box-shadow:inset 0 0 20px #000
 }
 
 
 .title{
-	left:0%;
-	width:100%;
+	width:95%;
 	top:100%;
 	height: 90px;
-	text-align:left;
+	text-align:right;
+	padding-right:5%;
 	line-height:95px;
 	position:fixed;
 	color:#FFF;
-	padding-left: 100px;
 	font-size:50px;
 	background:#000;
 	z-index:10;
 	//text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 }
-
-.content{
-	width:100%;
-	height:100%;
-	overflow:auto;
-	font-size:30px;
-	position:relative;
-}
+.tab1 pre{font-size:20px;}
 
 #tab1:checked~.tab1{left:0%}
 #tab1:checked~.tab2{left:100%}
 #tab1:checked~.tab3{left:200%}
 #tab1:checked~.tab4{left:300%}
-#tab1:checked~.tab1 >.title{left:0%;top:initial;bottom:0%;transition:all 1500ms ease;}
+#tab1:checked~.tab1 >.title{left:0%;top:auto;bottom:0%;transition:all 1500ms ease;}
 
 #tab2:checked~.tab1{left:-100%}
 #tab2:checked~.tab2{left:0%}
@@ -138,7 +141,9 @@ input[type="radio"]{display:none}
 .title{
 	height: 60px;
 	line-height:62px;
-	padding-left: 60px;
 	font-size:30px;
+	
 }
+.tab1 pre{font-size:15px;}
+#nav-fix{top:15%}
 } 
