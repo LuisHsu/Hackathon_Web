@@ -70,7 +70,8 @@ body{
 }
 
 .tab1{
-	background:url(tw9.jpg)#FF0;left:0%;
+	//background:url(tw9.jpg)#FF0;left:0%;
+	//background:#FFFFFF;left:0%;
 	background-size:cover;
 }
 
@@ -136,6 +137,10 @@ input[type="radio"]{display:none}
 #tab4:checked~.tab3{left:-100%}
 #tab4:checked~.tab4{left:0%}
 #tab4:checked~.tab4 >.title{top:20px;transition:all 1500ms ease;}
+
+#TimerText{
+	font-family:"Trebuchet MS",Arial, Helvetica, sans-serif;font-size:15px;
+}
 
 @media(max-height:600px){
 .title{
