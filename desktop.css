@@ -139,7 +139,11 @@ input[type="radio"]{display:none}
 #tab4:checked~.tab4 >.title{top:20px;transition:all 1500ms ease;}
 
 #TimerText{
-	font-family:"Trebuchet MS",Arial, Helvetica, sans-serif;font-size:15px;
+	font-family:"Trebuchet MS",Arial, Helvetica, sans-serif;font-size:25px;
+}
+
+.content{
+	font-family:"Trebuchet MS",Arial, Helvetica, sans-serif;font-size:25px;
 }
 
 @media(max-height:600px){
