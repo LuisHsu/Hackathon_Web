@@ -1,0 +1,11 @@
+<NotepadPlus>
+    <Project name="Hackathon">
+        <File name="adapter.js" />
+        <File name="desktop.css" />
+        <File name="index.html" />
+    </Project>
+    <Project name="CourseRelease">
+        <File name="C:\Users\luis8\Documents\workspace\CourseLaunch\public\scripts\index.js" />
+        <File name="C:\Users\luis8\Documents\workspace\CourseLaunch\views\index.ejs" />
+    </Project>
+</NotepadPlus>

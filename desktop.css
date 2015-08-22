@@ -1,18 +1,14 @@
 @import'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css';
 *{margin:0;padding:0}
+@import url(http://fonts.googleapis.com/earlyaccess/cwtexyen.css);
 
 body{
 	overflow:auto;font-family: 'Ropa Sans', sans-serif
 }
 
-#mobileMenu{
-	margin:20px;
-	padding:5px;
-	font-size:40px;
-	color:#FFFFFF;
-	background-color:#000000;
-	border-style:solid;
-	border-radius:10px;
+.introDiv{
+	margin-top:50px;
+	position:relative;
 }
 
 #nav-fix{
@@ -35,7 +31,7 @@ body{
 #nav-fix li span{
 	position:relative;
 	background:#000;
-	font-family:cwtexqyuan,"Trebuchet MS",Arial, Helvetica, sans-serif;font-size:15px;
+	font-family:"Trebuchet MS",Arial, Helvetica, sans-serif;font-size:15px;
 	height:30px;
 	border-radius:2px;
 	width:90px;
@@ -80,13 +76,31 @@ body{
 }
 
 .tab1{
-	//background:url(pictures/tw9.jpg)#FF0;left:0%;
-	//background:#FFFFFF;left:0%;
+	//background:#FF0;
+	left:0%;
 	background-size:cover;
+}
+.tab1bg{
+	background:url(pictures/tw9.jpg);
+	background-size:cover;
+	position:absolute;
+	width:100%;
+	height:100%;
+	z-index:-999;
+	opacity:0.3;
 }
 
 .tab2{
-	background:url(pictures/tbg.jpg)#F90;left:100%
+	//background:rgba(255,128,0,1);
+	left:100%;
+}
+.tab2bg{
+	background:url(pictures/tbg.jpg);
+	position:absolute;
+	width:100%;
+	height:100%;
+	z-index:-999;
+	opacity:0.3;
 }
 
 .tab3{
@@ -203,7 +217,7 @@ input[type="radio"]{display:none}
 #tab7:checked~.tab7 >.title{top:20px;transition:all 1500ms ease;}
 
 #TimerText{
-	font-family:"Trebuchet MS",Arial, Helvetica, sans-serif;font-size:25px;
+	font-family:"Trebuchet MS",Arial, Helvetica,sans-serif;font-size:25px;
 }
 
 .content{
