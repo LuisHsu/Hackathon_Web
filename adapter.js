@@ -14,23 +14,35 @@ function createlink(){
 createlink();
 
 // Menu
-function menuDown(e){
-	//startX=e.touches[0].clientX;
-}
-function menuMove(e){
-	var posX=-295+parseInt(e.touches[0].clientX);
-	if((posX>=-295)&&(posX<=0)){
-		document.getElementById("nav-fix").style.left=String(posX)+"px";
+var menuOpened=false;
+var menuLeft=-295;
+var timer;
+function menuClick(){
+	if(menuOpened){
+		timer=setInterval(function(){
+			if(menuLeft>-295){
+				menuLeft-=1;
+				document.getElementById("nav-fix").style.left=String(menuLeft)+"px";
+			}else{
+				menuLeft=-295;
+				document.getElementById("nav-fix").style.left=String(menuLeft)+"px";
+				clearInterval(timer);
+			}
+		},3);
+		menuOpened=false;
 	}else{
-		if(posX<-295){
-			document.getElementById("nav-fix").style.left="-295px";
-		}else{
-			document.getElementById("nav-fix").style.left="0px";
-		}
+		timer=setInterval(function(){
+			if(menuLeft<0){
+				menuLeft+=1;
+				document.getElementById("nav-fix").style.left=String(menuLeft)+"px";
+			}else{
+				menuLeft=0;
+				document.getElementById("nav-fix").style.left=String(menuLeft)+"px";
+				clearInterval(timer);
+			}
+		},3);
+		menuOpened=true;
 	}
-}
-function menuUp(e){
-	
 }
 
 // Timer
