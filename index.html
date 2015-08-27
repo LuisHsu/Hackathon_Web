@@ -1,145 +1,113 @@
-<!DOCTYPE html>
-<!-- saved from url=(0036)http://myweb.ncku.edu.tw/~f74011221/ -->
-<html lang="en" itemscope="" itemtype="http://schema.org/Article">
+<!doctype html><html>
+<meta charset="utf-8" />
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta charset="utf-8">
 	<title>成大黑客松</title>
 	<script src="isMobile.js"></script>
 	<script src="adapter.js"></script>
-	<link type="text/css" rel="stylesheet" href="desktop.css" />
 </head>
 <body>
-	<input type="radio" id="tab1" checked="" name="tab">
-	<input type="radio" id="tab2" name="tab">
+	<input type="radio" id="tab1" checked name="tab">
+	<input type="radio" id="tab2" name="tab" onchange="tab2Change();">
 	<input type="radio" id="tab3" name="tab">
 	<input type="radio" id="tab4" name="tab">
-	<input type="radio" id="tab5" name="tab">
-	<input type="radio" id="tab6" name="tab">
-	<input type="radio" id="tab7" name="tab">
+
 <div id="nav-fix">
+	<div id="nav-fix-drag" ontouchstart="menuDown(event);" ontouchend="menuUp(event);" ontouchmove="menuMove(event);">
+		<p> &rArr; M e n u &lArr; </p>
+	</div>
 	<ul>
 		<li><label for="tab1"><i class="fa fa-home"></i> <span>首頁</span></label> </li>
 		<li><label for="tab2"><i class="fa fa-rocket"></i> <span>活動介紹</span></label> </li>
 		<li><label for="tab3"><i class="fa fa-pencil"></i> <span>報名資訊</span></label> </li>
-		<li><label for="tab4"><i class="fa fa-trophy"></i> <span>比賽資訊</span></label> </li>
-		<li><label for="tab5"><i class="fa fa-users"></i> <span>合作夥伴</span></label> </li>
-		<li><label for="tab6"><i class="fa fa-comments-o"></i> <span>FAQ </span></label> </li>
-		<li><label for="tab7"><i class="fa fa-phone"></i> <span>聯絡資訊</span></label> </li>
+		<li><label for="tab4"><i class="fa fa-trophy"></i> <span>活動時間</span></label> </li>
+		<li><label for=""><i class="fa fa-users"></i> <span>合作夥伴</span></label> </li>
+		<li><label for=""><i class="fa fa-comments-o"></i> <span>FAQ </span></label> </li>
+		<li><label for=""><i class="fa fa-phone"></i> <span>聯絡資訊</span></label> </li>
 	</ul>
 </div>
 
-<script>
-	if(mode!='mobile'){
-		document.getElementById("nav-fix").style="display:none;";
-	}
-</script>
-
 <div class="tab tab1">
-<div class="tab1bg"></div>
-<div class="title"><pre>主辦:成大資訊工程系    協辦:成大創業中心    贊助:一堆大咖    特別感謝:太多了就謝天吧</pre></div>
-<img src="./pictures/logo.png" style="position:relative; top:10%;left:35%; width:30%; height:auto;">
-<center><h3 id="TimerText"></h3></center>
+	<div class="title"><p style="font-weight:bold">成大黑客松</p><pre>主辦:成大資訊工程系    協辦:成大創業中心    贊助:一堆大咖
+特別感謝:太多了就謝天吧</pre>
+	</div>
+	<img src="somepics/logo.png" id="indexLogo"/>
+	<div id="TimerText"></div>
 </div>
+
+
 <div class="tab tab2"><div class="title">活動介紹</div>
-<div class="tab2bg"></div>
-	<div class="content" style="width:100%;height:100%;overflow:auto;font-size:30px;position:relative;">
-		<div class="introDiv" style="margin-top:130px;">
-			<h2 style="left:200px;position:relative;padding-bottom:20px;">什麼是黑客松?</h2>
-			
-<pre>
-		黑客松 ( hackathon ) 其實是「hack」和「marathon」所組成的新創單字。
-		hack常被人定義為「非法破解或破壞某個程式、系統及網路安全」
-		此處則取「程式設計、解決問題」的含意。
-		而黑客松就是一種馬拉松式的程式開發活動。
-		這是個讓短期之內專注於解決手邊問題，或是傾心於手邊專案完成的競賽。
-		在活動中人們會在輕鬆的環境下
-		一邊享受美食，一邊腦力激盪出各種解決問題的創意
-		透過開發者、設計師、問題發想者等合作
-		在有限時間內完成問題界定、創意發想、作品實作、成果展示。
-		由於在短期之內要做出產品雛形
-		因此團隊之間高度的合作能力及創意思考的能力都是不可或缺的。
-</pre>
-		</div>
-		<div class="introDiv">
-			<h2 style="left:200px;position:relative;padding-bottom:20px;">為什麼我們要辦黑客松?</h2>
-<pre>
-		近幾年創新及創業觀念興起，需要解決的問題也越來越複雜
-		因此「團隊合作」對學生來說一直是重要的學習課題。
-		在國外，黑客松這種透過創意發想並團隊合作實踐的活動漸漸備受重視
-		在各大企業、大學內都十分盛行
-		而在台灣，黑克松的活動卻僅集中於北部地區
-		據我們了解，只有g0v黑客松及去年舉辦的台南黑客松曾跨足濁水溪以南的地區
-		其餘皆集中於大台北地區。
-		這讓我們感到十分可惜
-		因此在征戰其他黑客松活動之後
-		我們成大資訊系的學生，希望在南台灣也能夠舉辦這樣的活動。
-		讓南台灣的學生也有⼀個舞台能夠展現自己的創意
-		並且加強學生之間的團隊合作能力
-		更甚者藉由黑客松的產品雛形進一步創業。
-</pre>
-		</div>
+	<div id="tab2_Content">
+		<table style="width:90%;margin:30px auto;font-weight:bold">
+			<tr>
+				<td class="td_title">
+					\\WHAT 什麼是黑客松?<hr color="#000">
+				</td>
+				<td class="td_title">
+					\\WHY 為什麼我們要辦黑客松?<hr color="#000">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class="td_text"><br>
+						黑客松 ( hackathon ) 是「hack」和「marathon」兩的單字所組成的新創單字。而黑客松就是一種馬拉松式的程式開發活動。
+						這是個短期之內傾心於手邊專案完成的競賽。由於在短期之內要做出產品雛形，因此團隊之間高度的合作及創意都是不可或缺的。</p>
+				</td>
+				<td>
+					<p class="td_text"><br>
+						近幾年創新及創業觀念興起，因此「團隊合作」對學生來說一直是重要的學習課題。
+						黑客松這種透過創意發想並團隊合作實踐的活動一直十分盛行，而在台灣，黑克松的活動卻僅集中於北部地區，
+						這讓我們感到十分可惜，我們成大資訊系的學生，希望在南台灣也能夠舉辦這樣的活動。
+					</p>
+				</td>
+			</tr>
+		</table>
+		<table style="width:90%;margin:auto;font-weight:bold">
+			<tr>
+				<td class="td_title">
+				\\WHAT will you learn in hackathon?<hr color="#000">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p class="td_text"><br>
+						我們想透過黑客松這樣的活動，讓參賽者可以有一個舞台能夠展現創意以及培養團隊合作的精神。
+						此外，另一個附加價值是讓參與這個活動的所有人能夠有交友的機會。
+						因為我們會在這個活動中邀請不同地區學校的參賽隊伍，希望能夠激起不同學校、不同科系間的激盪。
+					</p>
+					<br>
+				</td>
+			</tr>
+		</table>		
 	</div>
+	<img src="somepics/hack.png" class="tab2_img" />
 </div>
+
+
 <div class="tab tab3"><div class="title"><p style="padding-left:100px">報名資訊</p></div>
-	<div class="content" style="width:100%;height:100%;overflow:auto;font-size:30px;position:relative;">
-		<pre>			321231
-			2313213
-			3156
-			646516
-			321231
-			2313213
-			3156
-			646516
-			321231
-			2313213
-			3156
-			646516
-			321231
-			2313213
-			3156
-			646516
-			321231
-			2313213
-			3156
-			646516
-			321231
-			2313213
-			3156
-			646516
-			321231
-			2313213
-			3156
-			646516
-			321231
-			2313213
-			3156
-			646516
-			321231
-			2313213
-			3156
-			646516
-			
-		</pre>
+	<div style="width:60%;height:60%;left:20%;top:100px;overflow:auto;font-size:30px;position:relative;background:rgba(255,255,255,1);padding:40px 20px;text-align:center;box-shadow:0px 0px 20px 10px white;">
+		<p style="font-size:28px;line-height:0px;">報名方式</p><br><hr style="width:50%;margin:auto;"/>
+		<p style="font-size:15px;line-height:45px;color:#1d87c8;">利用Accupass平台VV(點下方)</p><img src="somepics/accupass.png" /><br><br><br><br>
+		
+		<p style="font-size:28px;line-height:0px;">$  [ 報名費 ]</p><br><hr style="width:50%;margin:auto;"/>
+		<p style="font-size:15px;line-height:45px;color:#1d87c8;">每人費用 500 元（包含 200 元的保證金）團體報名以組為收費單位<br>個人報名則以個人為收費單位
+		</p><br><br><br>
+		
+		<p style="font-size:28px;line-height:0px;">WHO  [ 參加對象&分類 ]</p><br><hr style="width:50%;margin:auto;"/>
+		<p style="font-size:15px;line-height:45px;color:#1d87c8;">組別報名：由組長負責填寫資料<br>
+		個人報名：會由大會分配組別<br>
+		全國大專以上學生，預計招收 80 位參賽者。
+		</p>
 	</div>
 </div>
-<div class="tab tab4"><div class="title">比賽資訊</div>
-	<img src="./pictures/test.png" style="position:relative; top:110px; width:60%; height:auto;display:block; margin: auto;">
-	<iframe src="https://www.google.com/maps/d/embed?mid=zdK3FlbSi46M.kOoWE1bvfKjI" width="48%" height="60%" style="position:absolute; top:30%; left:26%;margin: auto;"></iframe>
-</div>
 
-<div class="tab tab5"><div class="title">合作夥伴</div>
-	<img src="./pictures/test.png" style="position:relative; top:110px; width:60%; height:auto;display:block; margin: auto;">
-</div>
 
-<div class="tab tab6"><div class="title">FAQ</div>
-	<img src="./pictures/test.png" style="position:relative; top:110px; width:60%; height:auto;display:block; margin: auto;">
+<div class="tab tab4"><div class="title">活動時間</div>
+	<div style="width:80%;height:60%;left:10%;top:100px;overflow:auto;font-size:30px;position:relative;background:rgba(255,255,255,0.3);padding:40px 20px;text-align:center;box-shadow:0px 0px 20px 5px #BBB inset;color:white;">
+		<p style="font-size:28px;line-height:0px;">日期&時程</p><br><hr style="width:50%;margin:auto;"/>
+		<p style="font-size:15px;line-height:45px;">民國104年10月17日 (六) 至 民國104年10月18日 (日)。為期兩天一夜<br>
+		<img src="somepics/dayone.png" style="position:relative;width:30%; height:auto;display:inline-box;" />
+		<img src="somepics/day2.png" style="position:relative;width:30%; height:auto;display:inline-box;" />
+	</div>
 </div>
-
-<div class="tab tab7"><div class="title">聯絡資訊</div>
-	<img src="./pictures/test.png" style="position:relative; top:110px; width:60%; height:auto;display:block; margin: auto;">
-</div>
-
 </body>
-
 </html>
