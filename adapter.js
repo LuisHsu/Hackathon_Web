@@ -21,26 +21,26 @@ function menuClick(){
 	if(menuOpened){
 		timer=setInterval(function(){
 			if(menuLeft>-295){
-				menuLeft-=1;
+				menuLeft-=10;
 				document.getElementById("nav-fix").style.left=String(menuLeft)+"px";
 			}else{
 				menuLeft=-295;
 				document.getElementById("nav-fix").style.left=String(menuLeft)+"px";
 				clearInterval(timer);
 			}
-		},3);
+		},1);
 		menuOpened=false;
 	}else{
 		timer=setInterval(function(){
 			if(menuLeft<0){
-				menuLeft+=1;
+				menuLeft+=10;
 				document.getElementById("nav-fix").style.left=String(menuLeft)+"px";
 			}else{
 				menuLeft=0;
 				document.getElementById("nav-fix").style.left=String(menuLeft)+"px";
 				clearInterval(timer);
 			}
-		},3);
+		},1);
 		menuOpened=true;
 	}
 }

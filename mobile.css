@@ -173,7 +173,7 @@ input[type="radio"]{display:none}
 #nav-fix{top:17%}
 }
 
-/* ID */
+/* Index */
 #TimerText{
 	text-align:center;
 	position:relative;
@@ -190,9 +190,9 @@ input[type="radio"]{display:none}
 	height:auto;
 	display:block
 }
-
+/* tab2 */
 #tab2_Content{
-	width:70%;
+	width:85%;
 	position:relative;
 	min-height:70%;
 	overflow:visible;
@@ -212,4 +212,65 @@ input[type="radio"]{display:none}
 }
 #tab2_Content .tab2_img{
 	position:fixed;bottom:0%;right:2%; width:32%; height:auto;
+}
+/* tab3 */
+#tab3_Content{
+	width:80%;
+	min-height:80%;
+	left:10%;
+	top:12%;
+	overflow:auto;
+	font-size:50px;
+	position:relative;
+	background:rgba(255,255,255,1);
+	padding:40px 20px;
+	text-align:center;
+	box-shadow:0px 0px 20px 10px white;
+}
+
+#tab3_Content .tab3_title{
+	font-size:70px;
+	line-height:0px;
+}
+#tab3_Content .tab3_text{
+	font-size:50px;
+	line-height:50px;
+	color:#1d87c8;
+}
+#accupassPic{
+	width:310px;
+	height:70px;
+	padding:10px;
+	border-style:solid;
+	border-radius:10px;
+	border-color:#1d87c8;
+}
+/* tab4 */
+#tab4_Content{
+	width:80%;
+	height:80%;
+	left:10%;
+	top:10%;
+	overflow:auto;
+	font-size:30px;
+	position:relative;
+	background:rgba(255,255,255,0.3);
+	padding:70px 20px;
+	text-align:center;
+	box-shadow:0px 0px 20px 5px #BBB inset;
+	color:white;
+}
+#tab4_Content .tab4_title{
+	font-size:75px;
+	line-height:0px;
+}
+#tab4_Content .tab4_subtitle{
+	font-size:35px;
+	line-height:60px;
+}
+#tab4_Content .tab4_image{
+	position:relative;
+	width:100%;
+	height:auto;
+	display:inline-box;
 }

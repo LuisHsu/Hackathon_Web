@@ -167,7 +167,7 @@ input[type="radio"]{display:none}
 	height:auto;
 	display:block
 }
-
+/* tab2 */
 #tab2_Content{
 	width:85%;
 	height:70%;
@@ -187,4 +187,18 @@ input[type="radio"]{display:none}
 }
 #tab2_Content .tab2_img{
 	position:absolute; bottom:0%;right:2%; width:32%; height:auto;
+}
+/* tab3 */
+#tab3_Content{
+	width:60%;
+	height:60%;
+	left:20%;
+	top:100px;
+	overflow:auto;
+	font-size:30px;
+	position:relative;
+	background:rgba(255,255,255,1);
+	padding:40px 20px;
+	text-align:center;
+	box-shadow:0px 0px 20px 10px white;
 }
