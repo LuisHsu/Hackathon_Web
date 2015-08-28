@@ -6,19 +6,15 @@ body{
 }
 
 #nav-fix{
-	width:auto;top:15%;position:fixed;left:0;z-index:9999
-}
-
-#nav-fix-drag{
-	display:none;
+	width:auto;top:25%;position:fixed;left:0;z-index:9999
 }
 
 #nav-fix li{
-	height:25px;
-	width:25px;
+	height:30px;
+	width:30px;
 	border-radius:50%;
 	box-shadow:inset 0 0 5px #000;
-	margin:15px;
+	margin:20px;
 	list-style:none;
 	position:relative;
 	transition:all 250ms ease;
@@ -30,13 +26,13 @@ body{
 	position:relative;
 	background:#000;
 	font-family:"Trebuchet MS",Arial, Helvetica, sans-serif;font-size:15px;
-	height:25px;
+	height:30px;
 	border-radius:2px;
 	width:90px;
 	text-align:center;
-	line-height:25px;
-	margin-left:45px;
-	top:-25px;
+	line-height:30px;
+	margin-left:50px;
+	top:-29px;
 	display:block;
 	transition:all 250ms ease;
 }
@@ -44,27 +40,27 @@ body{
 #nav-fix li span:after{
 	content:'';
 	position:absolute;
-	height:10px;
-	width:10px;
+	height:12px;
+	width:12px;
 	-webkit-transform:rotate(45deg);
 	-moz-transform:rotate(45deg);
 	-ms-transform:rotate(45deg);
 	transform:rotate(45deg);
-	left:-4px;
+	left:-6px;
 	margin-top:2px;
 	background:#000;top:7px
 }
 
 #nav-fix li:hover span{
-	margin-left:35px;opacity:1
+	margin-left:40px;opacity:1
 }
 
 #nav-fix li label{
-	display:block;cursor:pointer;height:25px;width:25px
+	display:block;cursor:pointer;height:30px;width:30px
 }
 
 #nav-fix li label i.fa{
-	height:25px;width:25px;text-align:center;line-height:25px;font-size:15px
+	height:30px;width:30px;text-align:center;line-height:30px;font-size:15px
 }
 
 .tab{
@@ -126,7 +122,6 @@ input[type="radio"]{display:none}
 	vertical-align:bottom;
 	//text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 }
-
 .tab1 pre{font-size:14px;}
 
 #tab1:checked~.tab1{left:0%}
@@ -148,6 +143,9 @@ input[type="radio"]{display:none}
 .tab1 pre{font-size:15px;}
 #nav-fix{top:17%}
 }
+#nav-fix-drag{
+	display:none;
+}
 
 /*** ID ***/
 #TimerText{
@@ -165,7 +163,7 @@ input[type="radio"]{display:none}
 	left:40%;
 	width:20%;
 	height:auto;
-	display:block
+	display:block;
 }
 /* tab2 */
 #tab2_Content{
@@ -202,7 +200,18 @@ input[type="radio"]{display:none}
 	text-align:center;
 	box-shadow:0px 0px 20px 10px white;
 }
-/* tab4 */
+
+.tab3_title{
+	font-size:28px;
+	line-height:0px;
+}
+
+.tab3_text{
+	font-size:15px;
+	line-height:45px;
+	color:#1d87c8;
+}
+
 #tab4_Content{
 	width:80%;
 	height:60%;
@@ -218,20 +227,14 @@ input[type="radio"]{display:none}
 	color:white;
 }
 
-.tab4_title{
-	width:25%;
-	height:auto;
-	line-height:0px;
-}
-
 .tab4_subtitle{
-	font-size:20px;
+	font-size:15px;
 	line-height:45px;
 }
 
 .tab4_image{
 	position:relative;
-	width:45%; 
+	width:30%; 
 	height:auto;
 	display:inline-box;
 }
