@@ -6,7 +6,11 @@ body{
 }
 
 #nav-fix{
-	width:auto;top:25%;position:fixed;left:0;z-index:9999
+	width:auto;
+	top:25%;
+	position:fixed;
+	left:0;
+	z-index:9999
 }
 
 #nav-fix li{
