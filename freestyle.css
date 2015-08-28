@@ -185,7 +185,7 @@ input[type="radio"]{display:none}
 #tab2_Content .td_text{
 	font-size:16px;padding-right:25px;line-height:30px;
 }
-#tab2_Content .tab2_img{
+.tab2_img{
 	position:absolute; bottom:0%;right:2%; width:32%; height:auto;
 }
 /* tab3 */
@@ -201,4 +201,37 @@ input[type="radio"]{display:none}
 	padding:40px 20px;
 	text-align:center;
 	box-shadow:0px 0px 20px 10px white;
+}
+/* tab4 */
+#tab4_Content{
+	width:80%;
+	height:60%;
+	left:10%;
+	top:100px;
+	overflow:auto;
+	font-size:30px;
+	position:relative;
+	background:rgba(255,255,255,0.3);
+	padding:40px 20px;
+	text-align:center;
+	box-shadow:0px 0px 20px 5px #BBB inset;
+	color:white;
+}
+
+.tab4_title{
+	width:25%;
+	height:auto;
+	line-height:0px;
+}
+
+.tab4_subtitle{
+	font-size:20px;
+	line-height:45px;
+}
+
+.tab4_image{
+	position:relative;
+	width:45%; 
+	height:auto;
+	display:inline-box;
 }

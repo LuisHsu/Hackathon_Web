@@ -14,7 +14,7 @@ body{
 	border-width:5px;
 	border-right-width:0;
 	border-color:#444444;
-	background-color:#FFF;
+	background-color:rgba(255,255,255,0.75);
 	left:-295px;
 }
 
@@ -194,8 +194,8 @@ input[type="radio"]{display:none}
 #tab2_Content{
 	width:85%;
 	position:relative;
-	min-height:70%;
-	overflow:visible;
+	height:85%;
+	overflow:auto;
 	top:10%;
 	float:right;
 	right:0%;
@@ -210,7 +210,7 @@ input[type="radio"]{display:none}
 #tab2_Content .td_text{
 	font-size:40px;padding-right:25px;line-height:40px;
 }
-#tab2_Content .tab2_img{
+.tab2_img{
 	position:fixed;bottom:0%;right:2%; width:32%; height:auto;
 }
 /* tab3 */
@@ -260,15 +260,16 @@ input[type="radio"]{display:none}
 	box-shadow:0px 0px 20px 5px #BBB inset;
 	color:white;
 }
-#tab4_Content .tab4_title{
-	font-size:75px;
+.tab4_title{
+	width:60%;
+	height:auto;
 	line-height:0px;
 }
-#tab4_Content .tab4_subtitle{
-	font-size:35px;
+.tab4_subtitle{
+	font-size:42px;
 	line-height:60px;
 }
-#tab4_Content .tab4_image{
+.tab4_image{
 	position:relative;
 	width:100%;
 	height:auto;
