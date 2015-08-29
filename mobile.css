@@ -229,7 +229,7 @@ input[type="radio"]{display:none}
 }
 .td_text{
 	font-size:50px;
-	line-height:50px;
+	line-height:80px;
 }
 /* tab3 */
 #tab3_Content{
@@ -252,9 +252,9 @@ input[type="radio"]{display:none}
 	line-height:75px;
 	color:#BFFFFF;
 }
-#tab3_Content .tab3_text{
+.tab3_text{
 	font-size:50px;
-	line-height:50px;
+	line-height:80px;
 }
 #accupassPic{
 	width:310px;
