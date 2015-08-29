@@ -26,34 +26,11 @@ function createlink(){
 createlink();
 
 // Menu
-var menuOpened=false;
-var menuLeft=-295;
-var timer;
+var menuOpened=true;
 function menuClick(){
-	if(menuOpened){
-		timer=setInterval(function(){
-			if(menuLeft>-295){
-				menuLeft-=10;
-				document.getElementById("nav-fix").style.left=String(menuLeft)+"px";
-			}else{
-				menuLeft=-295;
-				document.getElementById("nav-fix").style.left=String(menuLeft)+"px";
-				clearInterval(timer);
-			}
-		},1);
+	if(isMobile.phone && menuOpened){
+		alert("點其他位置可收回目錄!");
 		menuOpened=false;
-	}else{
-		timer=setInterval(function(){
-			if(menuLeft<0){
-				menuLeft+=10;
-				document.getElementById("nav-fix").style.left=String(menuLeft)+"px";
-			}else{
-				menuLeft=0;
-				document.getElementById("nav-fix").style.left=String(menuLeft)+"px";
-				clearInterval(timer);
-			}
-		},1);
-		menuOpened=true;
 	}
 }
 
