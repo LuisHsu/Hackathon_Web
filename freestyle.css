@@ -4,9 +4,12 @@
 body{
 	overflow:auto;font-family: 'Ropa Sans', sans-serif
 }
-
+.mobiletitle{
+	display:none;
+	margin-left:auto;
+}
 #nav-fix{
-	width:auto;top:15%;position:fixed;left:0;z-index:9999
+	width:auto;top:25%;position:fixed;left:0;z-index:9999
 }
 
 #nav-fix-drag{
@@ -18,7 +21,7 @@ body{
 	width:25px;
 	border-radius:50%;
 	box-shadow:inset 0 0 5px #000;
-	margin:15px;
+	margin:20px;
 	list-style:none;
 	position:relative;
 	transition:all 250ms ease;
