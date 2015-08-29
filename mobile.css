@@ -4,6 +4,13 @@
 body{
 	overflow:auto;font-family: 'Ropa Sans', sans-serif
 }
+.desktoptitle{
+	display:none;
+}
+.mobiletitle{
+	margin-left:auto;
+	font-size:40px;
+}
 
 #nav-fix{
 	width:360px;
