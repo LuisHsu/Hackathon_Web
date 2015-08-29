@@ -1,5 +1,6 @@
 // Link
 function createlink(){
+	// general
 	var link=document.createElement("LINK");
 	link.rel="stylesheet";
 	link.type="text/css";
@@ -8,6 +9,17 @@ function createlink(){
 		link.href="mobile.css";
 	}else{
 		link.href="freestyle.css";
+	}
+	document.head.appendChild(link);
+	// timer
+	var link=document.createElement("LINK");
+	link.rel="stylesheet";
+	link.type="text/css";
+
+	if(isMobile.phone){
+		link.href="timer.css";
+	}else{
+		link.href="timer.css";
 	}
 	document.head.appendChild(link);
 };
@@ -46,14 +58,47 @@ function menuClick(){
 }
 
 // Timer
-function dateTimerTick(){
-	var openTime = new Date(2015,9,14,8,0,0,0);
+function changeNumber(id1,id2,id3,from,to){
+	document.getElementById(String(id1)).innerHTML=String(to);
+	document.getElementById(String(id3)).innerHTML=String(from);
+	document.getElementById(String(id2)).innerHTML=String(from);
+	document.getElementById(String(id2)).className="timer2_up";
+	setTimeout(function(){
+		document.getElementById(String(id2)).innerHTML=String(to);
+		document.getElementById(String(id2)).className="timer2_down";
+	},500);
+}
+
+var openTime = new Date(2015,9,14,8,0,0,0);
+function TimeInit(){
 	var curTime = new Date();
 	var diff = new Date(openTime.getTime() - curTime.getTime() - 28800000);
-	document.getElementById("TimerText").innerHTML = "活動倒數：" +
+	var diffdate=parseInt((openTime.getTime() - curTime.getTime())/86400000);
+	changeNumber("mi1","mi2","mi3","&nbsp;&nbsp;",diff.getMinutes());
+	changeNumber("h1","h2","h3","&nbsp;&nbsp;",diff.getHours());
+	changeNumber("d1","d2","d3","&nbsp;&nbsp;",diffdate);
+}
+function dateTimerTick(){
+	var curTime = new Date();
+	var diff = new Date(openTime.getTime() - curTime.getTime() - 28800000);
+	/*document.getElementById("TimerText").innerHTML = "活動倒數：" +
 		(diff.getMonth()-1)+"月"  +(diff.getDate()-1)   +"日"+
 		diff.getHours()+"小時"+diff.getMinutes()+"分"+
-		diff.getSeconds()+"秒";
+		diff.getSeconds()+"秒";*/
+	if(diff.getSeconds()>0){changeNumber("s1","s2","s3",diff.getSeconds(),diff.getSeconds()-1);
+	}else{
+		changeNumber("s1","s2","s3",diff.getSeconds(),59);
+		if(diff.getMinutes()>0){changeNumber("mi1","mi2","mi3",diff.getMinutes(),diff.getMinutes()-1);
+		}else{
+			changeNumber("mi1","mi2","mi3",diff.getMinutes(),59);
+			if(diff.getHours()>0){changeNumber("h1","h2","h3",diff.getHours(),diff.getHours()-1);
+			}else{
+				changeNumber("h1","h2","h3",diff.getHours(),23);
+				var diffdate=parseInt((openTime.getTime() - curTime.getTime())/86400000);
+				changeNumber("d1","d2","d3",diffdate,diffdate-1);
+			}
+		}
+	}
 }
 setInterval(dateTimerTick,1000);
 

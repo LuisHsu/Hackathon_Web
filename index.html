@@ -12,8 +12,8 @@
 	<input type="radio" id="tab4" name="tab">
 
 <div id="nav-fix">
-	<div id="nav-fix-drag" onclick="menuClick();">
-		<p> &rArr; M e n u &lArr; </p>
+	<div id="nav-fix-drag" >
+		<p> &rArr; M e n u &rArr; </p>
 	</div>
 	<ul>
 		<li><label for="tab1"><i class="fa fa-home"></i> <span>首頁</span></label> </li>
@@ -26,31 +26,44 @@
 	</ul>
 </div>
 
-<div class="tab tab1">
+<div class="tab tab1" style="left:0;z-index:-320;">
 	<div class="title"><p style="font-weight:bold">成大黑客松</p><pre>主辦:成大資訊工程系    協辦:成大創業中心    贊助:一堆大咖
 特別感謝:太多了就謝天吧</pre>
 	</div>
 	<img src="somepics/logo.png" id="indexLogo"/>
-	<div id="TimerText"></div>
+	<div id="TimerTitle">
+		活動倒數
+		<div class="TimerWrap" style="width:90px;"><div id="d1" class="timer1">&nbsp;&nbsp;</div><div id="d2" class="timer2_up">&nbsp;&nbsp;</div><div id="d3" class="timer3">&nbsp;&nbsp;</div></div>
+		日&nbsp;&nbsp;
+		<div class="TimerWrap"><div id="h1" class="timer1">&nbsp;&nbsp;</div><div id="h2" class="timer2_up">&nbsp;&nbsp;</div><div id="h3" class="timer3">&nbsp;&nbsp;</div></div>
+		:
+		<div class="TimerWrap"><div id="mi1" class="timer1">&nbsp;&nbsp;</div><div id="mi2" class="timer2_up">&nbsp;&nbsp;</div><div id="mi3" class="timer3">&nbsp;&nbsp;</div></div>
+		:
+		<div class="TimerWrap"><div id="s1" class="timer1">&nbsp;&nbsp;</div><div id="s2" class="timer2_up">&nbsp;&nbsp;</div><div id="s3" class="timer3">&nbsp;&nbsp;</div></div>
+	</div>
 </div>
 
 
 <div class="tab tab2"><div class="title">活動介紹</div>
+	<img class="tab_back" id="back2" />
 	<div id="tab2_Content">
-		<table style="width:90%;margin:30px auto;font-weight:bold">
+		<table style="width:90%;margin:30px auto;">
 			<tr>
 				<td class="td_title">
-					\\WHAT 什麼是黑客松?<hr color="#000">
+					\\WHAT 什麼是黑客松?<br><hr style="width:60%;margin:auto;"/>
 				</td>
 				<td class="td_title">
-					\\WHY 為什麼我們要辦黑客松?<hr color="#000">
+					\\WHY 為什麼我們要辦黑客松?<br><hr style="width:60%;margin:auto;"/>
 				</td>
 			</tr>
 			<tr>
 				<td>
 					<p class="td_text"><br>
 						黑客松的英文是 Hackathon 源自於 Hack + Marathon 。黑客松就是一種馬拉松式的程式創作活動。
-						參賽者必須在有限的時間內，利用手邊的資源來解決問題進而變成一個作品。在這樣的活動中，團隊合作和解決問題的能力是不可或缺的！</p>
+						參賽者必須在有限的時間內，利用手邊的資源來解決問題進而變成一個作品。在這樣的活動中，團隊合作和解決問題的能力是不可或缺的！
+					</p>
+					<br>
+					<br>
 				</td>
 				<td>
 					<p class="td_text"><br>
@@ -58,13 +71,12 @@
 						黑客松這種透過創意發想並團隊合作實踐的活動一直十分盛行，而在台灣，黑克松的活動卻僅集中於北部地區，
 						這讓我們感到十分可惜，我們成大資訊系的學生，希望在南台灣也能夠舉辦這樣的活動。
 					</p>
+					<br>
 				</td>
 			</tr>
-		</table>
-		<table style="width:90%;margin:auto;font-weight:bold">
 			<tr>
 				<td class="td_title">
-				\\WHAT will you learn in hackathon?<hr color="#000">
+				\\WHAT will you learn in hackathon?<br><hr style="width:60%;margin:auto;"/>
 				</td>
 			</tr>
 			<tr>
@@ -74,25 +86,24 @@
 						此外，另一個附加價值是讓參與這個活動的所有人能夠有交友的機會。
 						因為我們會在這個活動中邀請不同地區學校的參賽隊伍，希望能夠激起不同學校、不同科系間的激盪。
 					</p>
-					<br>
 				</td>
 			</tr>
 		</table>		
 	</div>
-	<img src="somepics/hack.png" class="tab2_img" />
 </div>
 
 
 <div class="tab tab3"><div class="title"><p style="padding-left:100px">報名資訊</p></div>
+	<img class="tab_back" id="back3" />
 	<div id="tab3_Content">
-		<br><p class="tab3_title">報名方式</p><br><hr style="width:50%;margin:auto;"/>
+		<br><p class="tab3_title">[ 報名方式 ]</p><br><hr style="width:60%;margin:auto;"/>
 		<br><p class="tab3_text">&dArr;利用Accupass平台&dArr;</p><br><img src="somepics/accupass.png" id="accupassPic"/><br><br><br>
 		
-		<p class="tab3_title">[ 報名費 ]</p><br><hr style="width:50%;margin:auto;"/>
+		<p class="tab3_title">[ 報名費 ]</p><br><hr style="width:60%;margin:auto;"/>
 		<br><p class="tab3_text">每人 500 元(包含 200 元的保證金)<br>團體報名以組為收費單位<br>個人報名則以個人為收費單位
 		</p><br><br>
 		
-		<p class="tab3_title">[ 參加對象 & 分類 ]</p><br><hr style="width:50%;margin:auto;"/>
+		<p class="tab3_title">[ 參加對象 & 分類 ]</p><br><hr style="width:60%;margin:auto;"/>
 		<br><p class="tab3_text">組別報名：由組長負責填寫資料<br>
 		個人報名：由大會分配組別<br>
 		全國大專以上學生均可參加<br>預計招收 80 位參賽者。
@@ -102,6 +113,7 @@
 
 
 <div class="tab tab4"><div class="title">活動時間</div>
+	<img class="tab_back" id="back4" />
 	<div id="tab4_Content">
 		<img src="somepics/daytitle.png" class="tab4_title" /><br><hr style="width:50%;margin:auto;"/><br>
 		<p class="tab4_subtitle">民國104年10月17日 (六)<br>至<br>民國104年10月18日 (日)<br>為期兩天一夜<br></p>
@@ -109,5 +121,10 @@
 		<img src="somepics/day2.png" class="tab4_image" />
 	</div>
 </div>
+
+<script>
+	TimeInit();
+</script>
+
 </body>
 </html>

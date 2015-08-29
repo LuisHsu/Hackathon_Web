@@ -69,35 +69,21 @@ body{
 
 .tab{
 	height:100%;width:100%;position:fixed;transition:all 1000ms ease;
-	
+	left:100%;
+	background:rgba(255,255,255,1);
 	//padding:30px 50px;box-sizing:border-box;
 }
 
-.tab1{
-	background:url("polarlight.png")#FFF;
-	background-position:left;
-	background-size: 40% auto;
-	 background-repeat: repeat-y;
-	left:0%;
-	//background-size:cover;
-}
-
-.tab2{
-	background:#922;
-	background-position:bottom;
-	//background-size: auto 100%;
-	// background-repeat: repeat-x;
-	left:100%;
-}
-
-.tab3{
-	background:#DD0;left:100%;
+.tab_back{
+	position:absolute;width:100%;height:100%;z-index:-100;opacity:0.3;
 	background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 }
-
-.tab4{
-	background:#704;left:100%;
-}
+#back2{background-image:url("somepics/deskBack1.jpg");}
+#back3{background-image:url("somepics/deskBack2.jpg");}
+#back4{background-image:url("somepics/deskBack3.jpg");}
 
 input[type="radio"]{display:none}
 
@@ -150,14 +136,12 @@ input[type="radio"]{display:none}
 }
 
 /*** ID ***/
-#TimerText{
+#TimerTitle{
 	text-align:center;
 	position:relative;
 	top:20%;
-	font-size:20px;
-	font-weight:bold;
+	font-size:50px;
 }
-
 
 #indexLogo{
 	position:relative;
@@ -169,53 +153,72 @@ input[type="radio"]{display:none}
 }
 /* tab2 */
 #tab2_Content{
-	width:85%;
-	height:70%;
-	overflow:auto;
-	position:relative;
-	top:100px;
+	width:70%;
+	height:60%;
 	left:15%;
-	background:rgba(230,180,30,1);
-	border-radius: 10px;
-	box-shadow:-12px 10px 8px 2px rgba(0,0,0,0.6);
+	top:20%;
+	overflow:auto;
+	font-size:30px;
+	position:relative;
+	padding:40px 20px;
+	text-align:center;
+	background:rgba(0,0,0,0.5);
+	border-radius:2px;
+	box-shadow:0px 0px 5px 10px rgba(0,0,0,0.5);
+	color:white;
 }
-#tab2_Content .td_title{
+.td_title{
 	font-size:25px;padding-right:25px;color:#fff;
 }
-#tab2_Content .td_text{
-	font-size:16px;padding-right:25px;line-height:30px;
+.td_text{
+	font-size:16px;padding-right:25px;line-height:32px;
 }
-.tab2_img{
-	position:absolute; bottom:0%;right:2%; width:32%; height:auto;
-}
+
 /* tab3 */
 #tab3_Content{
-	width:60%;
+	width:70%;
 	height:60%;
-	left:20%;
-	top:100px;
+	left:15%;
+	top:20%;
 	overflow:auto;
 	font-size:30px;
 	position:relative;
-	background:rgba(255,255,255,1);
 	padding:40px 20px;
 	text-align:center;
-	box-shadow:0px 0px 20px 10px white;
+	background:rgba(0,0,0,0.5);
+	border-radius:2px;
+	border-style:none;
+	box-shadow:0px 0px 5px 10px rgba(0,0,0,0.5);
+	color:white;
 }
+
+#accupassPic{
+	width:210px;
+	height:40px;
+	padding:10px;
+	border-style:solid;
+	border-color:#99CCFF;
+	border-radius:10px;
+	background-color:rgba(255,255,255,0.8);
+}
+
 /* tab4 */
 #tab4_Content{
-	width:80%;
+	width:70%;
 	height:60%;
-	left:10%;
-	top:100px;
+	left:15%;
+	top:20%;
 	overflow:auto;
 	font-size:30px;
 	position:relative;
-	background:rgba(255,255,255,0.3);
 	padding:40px 20px;
 	text-align:center;
-	box-shadow:0px 0px 20px 5px #BBB inset;
+	background:rgba(0,0,0,0.5);
+	border-radius:2px;
+	border-style:none;
+	box-shadow:0px 0px 5px 10px rgba(0,0,0,0.5);
 	color:white;
+
 }
 
 .tab4_title{

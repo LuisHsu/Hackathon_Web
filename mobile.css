@@ -6,7 +6,7 @@ body{
 }
 
 #nav-fix{
-	width:295px;
+	width:360px;
 	top:18%;
 	position:fixed;
 	z-index:9999;
@@ -15,7 +15,33 @@ body{
 	border-right-width:0;
 	border-color:#444444;
 	background-color:rgba(255,255,255,0.75);
+	border-radius:0 20px 20px 0;
 	left:-295px;
+	-moz-animation-timing-function: ease-in-out;
+	-moz-animation-name: closeMenu;
+    -moz-animation-duration: 1s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-name: closeMenu;
+    -webkit-animation-duration: 1s;
+}
+
+#nav-fix:hover, #nav-fix:focus {
+	left:0px;
+	-moz-animation-timing-function: ease-in-out;
+	-moz-animation-name: openMenu;
+    -moz-animation-duration: 1s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-name: openMenu;
+    -webkit-animation-duration: 1s;
+}
+
+@keyframes openMenu {
+    0% {left:-295px;}
+    100% {left:0px;}
+}
+@keyframes closeMenu {
+    0% {left:0px;}
+    100% {left:-295px;}
 }
 
 #nav-fix-drag{
@@ -25,7 +51,7 @@ body{
 	background-color:#444444;
 	border-color:#444444;
 	top:-5px;	
-	left:100%;
+	left:300px;
 	text-align:center;
 	color:#FFF;
 	line-height:100px;
@@ -95,35 +121,17 @@ body{
 }
 
 .tab{
-	height:100%;width:100%;position:fixed;transition:all 1000ms ease;
-	//padding:30px 50px;box-sizing:border-box;
+	background:rgba(255,255,255,1);
+	height:100%;width:100%;height:100%;left:100%;position:fixed;transition:all 1000ms ease;background-size: cover;
 }
 
-.tab1{
-	background:url("polarlight.png")#FFF;
-	background-position:left;
-	background-size: 40% auto;
-	 background-repeat: repeat-y;
-	left:0%;
-	//background-size:cover;
+.tab_back{
+	position:fixed;width:100%;height:100%;z-index:-300;opacity:1;
 }
+#back2{background-image:url("somepics/mobileBack1.png");}
+#back3{background-image:url("somepics/mobileBack2.png");}
+#back4{background-image:url("somepics/mobileBack3.png");}
 
-.tab2{
-	background:#922;
-	background-position:bottom;
-	left:100%;
-	min-height:100%;
-	overflow:auto;
-}
-
-.tab3{
-	background:#DD0;left:100%;
-	background-size: cover;
-}
-
-.tab4{
-	background:#704;left:100%;
-}
 
 input[type="radio"]{display:none}
 
@@ -173,8 +181,10 @@ input[type="radio"]{display:none}
 #nav-fix{top:17%}
 }
 
+
+
 /* Index */
-#TimerText{
+#TimerTitle{
 	text-align:center;
 	position:relative;
 	top:40%;
@@ -188,54 +198,56 @@ input[type="radio"]{display:none}
 	left:20%;
 	width:60%;
 	height:auto;
-	display:block
+	display:block;
+	overflow:hidden;
 }
 /* tab2 */
 #tab2_Content{
-	width:85%;
-	position:relative;
-	height:85%;
-	overflow:auto;
+	width:80%;
+	height:80%;
+	left:10%;
 	top:10%;
-	float:right;
-	right:0%;
-	font-size:30px;
-	background:rgba(230,180,30,1);
-	border-radius: 10px;
-	box-shadow:-12px 10px 8px 2px rgba(0,0,0,0.6);
+	overflow:auto;
+	position:relative;
+	background:rgba(0,0,0,0.5);
+	padding:70px 20px;
+	text-align:center;
+	box-shadow:0px 0px 20px 5px #BBB inset;
+	color:white;
 }
-#tab2_Content .td_title{
-	font-size:60px;padding-right:25px;color:#fff;
+.td_title{
+	font-size:70px;
+	height:75px;
+	color:#BFFFFF;
 }
-#tab2_Content .td_text{
-	font-size:40px;padding-right:25px;line-height:40px;
-}
-.tab2_img{
-	position:fixed;bottom:0%;right:2%; width:32%; height:auto;
+.td_text{
+	font-size:50px;
+	line-height:50px;
 }
 /* tab3 */
 #tab3_Content{
 	width:80%;
-	min-height:80%;
+	height:80%;
 	left:10%;
-	top:12%;
+	top:10%;
 	overflow:auto;
-	font-size:50px;
+	font-size:30px;
 	position:relative;
-	background:rgba(255,255,255,1);
-	padding:40px 20px;
+	background:rgba(0,0,0,0.5);
+	padding:70px 20px;
 	text-align:center;
-	box-shadow:0px 0px 20px 10px white;
+	box-shadow:0px 0px 20px 5px #BBB inset;
+	color:white;
 }
 
-#tab3_Content .tab3_title{
+.tab3_title{
 	font-size:70px;
-	line-height:0px;
+	line-height:75px;
+	color:#BFFFFF;
 }
 #tab3_Content .tab3_text{
 	font-size:50px;
 	line-height:50px;
-	color:#1d87c8;
 }
 #accupassPic{
 	width:310px;
@@ -243,7 +255,7 @@ input[type="radio"]{display:none}
 	padding:10px;
 	border-style:solid;
 	border-radius:10px;
-	border-color:#1d87c8;
+	background-color:#FFFFFF;
 }
 /* tab4 */
 #tab4_Content{
@@ -254,7 +266,7 @@ input[type="radio"]{display:none}
 	overflow:auto;
 	font-size:30px;
 	position:relative;
-	background:rgba(255,255,255,0.3);
+	background:rgba(0,0,0,0.5);
 	padding:70px 20px;
 	text-align:center;
 	box-shadow:0px 0px 20px 5px #BBB inset;
