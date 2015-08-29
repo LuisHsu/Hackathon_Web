@@ -23,7 +23,7 @@ body{
 	border-color:#444444;
 	background-color:rgba(255,255,255,0.75);
 	border-radius:0 20px 20px 0;
-	left:-295px;
+	left:-305px;
 	-moz-animation-timing-function: ease-in-out;
 	-moz-animation-name: closeMenu;
     -moz-animation-duration: 1s;
@@ -43,12 +43,12 @@ body{
 }
 
 @keyframes openMenu {
-    0% {left:-295px;}
+    0% {left:-305px;}
     100% {left:0px;}
 }
 @keyframes closeMenu {
     0% {left:0px;}
-    100% {left:-295px;}
+    100% {left:-305px;}
 }
 
 #nav-fix-drag{
