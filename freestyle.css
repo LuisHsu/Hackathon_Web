@@ -84,9 +84,9 @@ body{
     -moz-background-size: cover;
     -o-background-size: cover;
 }
-#back2{background-image:url("somepics/deskBack1.jpg");}
-#back3{background-image:url("somepics/deskBack2.jpg");}
-#back4{background-image:url("somepics/deskBack3.jpg");}
+#back2{background-image:url("somepics/deskBack1.jpg");background-size:cover;}
+#back3{background-image:url("somepics/deskBack2.jpg");background-size:cover;}
+#back4{background-image:url("somepics/deskBack3.jpg");background-size:cover;}
 
 input[type="radio"]{display:none}
 
