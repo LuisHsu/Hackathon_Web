@@ -136,9 +136,10 @@ body{
 }
 
 .tab_back{
-	position:fixed;width:100%;height:100%;z-index:-300;opacity:1;
+	position:fixed;width:100%;height:100%;z-index:-300;opacity:1;background-size: cover;
 }
-#back2{background-image:url("somepics/mobileBack1.png");background-position:center;}
+#back1{background-image:url("somepics/index_mobile.jpg");}
+#back2{background-image:url("somepics/bgt.jpg");background-position:center;}
 #back3{background-image:url("somepics/mobileBack2.png");background-position:center;}
 #back4{background-image:url("somepics/mobileBack3.png");background-position:center;}
 
@@ -197,9 +198,10 @@ input[type="radio"]{display:none}
 #TimerTitle{
 	text-align:center;
 	position:relative;
-	top:40%;
+	top:34%;
 	font-size:60px;
 	font-weight:bold;
+	color:#fff;
 }
 
 #indexLogo{
@@ -233,6 +235,7 @@ input[type="radio"]{display:none}
 .td_text{
 	font-size:50px;
 	line-height:80px;
+	text-align:left;
 }
 /* tab3 */
 #tab3_Content{

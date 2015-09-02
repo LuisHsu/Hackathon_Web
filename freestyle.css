@@ -2,14 +2,14 @@
 *{margin:0;padding:0}
 
 body{
-	overflow:auto;font-family: 微軟正黑體,'Ropa Sans', sans-serif
+	overflow:auto;font-family: "cwtexqyuan",微軟正黑體,'Ropa Sans', sans-serif
 }
 .mobiletitle{
 	display:none;
 	margin-left:auto;
 }
 #nav-fix{
-	position:fixed;width:auto;top:25%;left:calc(15% - 140px);z-index:9999;transition:all 250ms ease;
+	position:fixed;width:auto;top:25%;left:0%;z-index:9999;transition:all 250ms ease;
 }
 
 #nav-fix-drag{
@@ -78,13 +78,14 @@ body{
 }
 
 .tab_back{
-	position:absolute;width:100%;height:100%;z-index:-100;opacity:0.6;
+	position:absolute;width:100%;height:100%;z-index:-100;opacity:0.7;
 	background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
 }
-#back2{background-image:url("somepics/deskBack1.jpg");}
+#back1{background-image:url("somepics/index_back.jpg");}
+#back2{background-image:url("somepics/bgt.jpg");background-position:center;}
 #back3{background-image:url("somepics/deskBack2.jpg");}
 #back4{background-image:url("somepics/deskBack3.jpg");}
 
@@ -135,15 +136,16 @@ input[type="radio"]{display:none}
 #TimerTitle{
 	text-align:center;
 	position:relative;
-	top:20%;
+	top:0%;
 	font-size:50px;
+	color:#fff;
 }
 
 #indexLogo{
 	position:relative;
-	top:20%;
-	left:40%;
-	width:20%;
+	top:10%;
+	left:35%;
+	width:30%;
 	height:auto;
 	display:block
 }
@@ -158,16 +160,16 @@ input[type="radio"]{display:none}
 	position:relative;
 	padding:40px 20px;
 	text-align:center;
-	background:rgba(0,0,0,0.5);
+	background:rgba(0,0,0,0.6);
 	border-radius:2px;
-	box-shadow:0px 0px 5px 10px rgba(0,0,0,0.5);
+	box-shadow:0px 0px 0px 10px rgba(0,0,0,0.6);
 	color:white;
 }
 .td_title{
 	font-size:25px;padding-right:25px;color:#fff;
 }
 .td_text{
-	font-size:16px;padding-right:25px;line-height:32px;
+	font-size:16px;padding-right:25px;line-height:32px;text-align:left;
 }
 
 /* tab3 */
@@ -184,7 +186,7 @@ input[type="radio"]{display:none}
 	background:rgba(0,0,0,0.5);
 	border-radius:2px;
 	border-style:none;
-	box-shadow:0px 0px 5px 10px rgba(0,0,0,0.5);
+	box-shadow:0px 0px 0px 10px rgba(0,0,0,0.5);
 	color:white;
 }
 
@@ -222,7 +224,7 @@ input[type="radio"]{display:none}
 	background:rgba(0,0,0,0.5);
 	border-radius:2px;
 	border-style:none;
-	box-shadow:0px 0px 5px 10px rgba(0,0,0,0.5);
+	box-shadow:0px 0px 0px 10px rgba(0,0,0,0.5);
 	color:white;
 
 }
