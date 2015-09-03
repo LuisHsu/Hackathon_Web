@@ -136,6 +136,7 @@ input[type="radio"]{display:none}
 	position:relative;
 	top:20%;
 	font-size:50px;
+	color:#fff;
 }
 
 #indexLogo{
