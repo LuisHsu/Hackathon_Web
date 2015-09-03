@@ -8,7 +8,7 @@ body{
 	margin-left:auto;
 }
 #nav-fix{
-	position:fixed;width:auto;top:25%;left:0%;z-index:9999;transition:all 250ms ease;
+	position:fixed;width:auto;top:25%;left:calc(15% - 140px);z-index:9999;transition:all 500ms ease;
 }
 
 #nav-fix-drag{
@@ -23,7 +23,6 @@ body{
 	margin:20px;
 	list-style:none;
 	position:relative;
-	transition:all 250ms ease;
 	color:#FFF;
 	background:rgba(0,0,0,1);
 }
@@ -31,7 +30,7 @@ body{
 #nav-fix li span{
 	position:relative;
 	background:#000;
-	font-family:"Trebuchet MS",微軟正黑體,Arial, Helvetica, sans-serif;font-size:15px;
+	font-family:微軟正黑體,"Trebuchet MS",Arial, Helvetica, sans-serif;font-size:15px;
 	height:25px;
 	border-radius:2px;
 	width:90px;
@@ -40,7 +39,6 @@ body{
 	margin-left:45px;
 	top:-25px;
 	display:block;
-	transition:all 250ms ease;
 }
 
 #nav-fix li span:after{
@@ -70,23 +68,22 @@ body{
 }
 
 .tab{
-	height:100%;width:100%;position:fixed;transition:all 1000ms ease;
+	height:100%;width:100%;position:fixed;transition:all 500ms ease;
 	left:100%;
 	background:rgba(255,255,255,1);
 	//padding:30px 50px;box-sizing:border-box;
 }
 
 .tab_back{
-	position:absolute;width:100%;height:100%;z-index:-100;opacity:0.7;
+	position:absolute;width:100%;height:100%;z-index:-100;opacity:0.75;
 	background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
 }
-#back1{background-image:url("somepics/index_back.jpg");}
-#back2{background-image:url("somepics/bgt.jpg");background-position:center;}
+#back2{background-image:url("somepics/tbg.jpg");background-position:center;}
 #back3{background-image:url("somepics/deskBack2.jpg");}
-#back4{background-image:url("somepics/deskBack3.jpg");}
+#back4{background-image:url("somepics/tbg3.jpg");background-position:bottom right;opacity:1;}
 
 input[type="radio"]{display:none}
 
@@ -100,19 +97,21 @@ input[type="radio"]{display:none}
 
 
 .title{
-	width:95%;
-	top:100%;
+	width:calc(65% + 60px);
+	left:calc(15% - 10px);
+	top:20px;
 	height: auto;
 	text-align:right;
 	padding-top:10px;
 	padding-bottom:10px;
 	padding-right:5%;
-	position:fixed;
+	position:absolute;
 	color:#fff;
 	font-size:35px;
 	background:rgba(0,0,0,1);
 	z-index:10;
 	vertical-align:bottom;
+	box-shadow:0px 5px 5px rgba(60,60,60,0.8);
 	//text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 }
 
@@ -120,70 +119,67 @@ input[type="radio"]{display:none}
 
 #tab1:checked~.tab1{left:0%}
 #tab1:checked~#nav-fix{left:0%;}
-#tab1:checked~.tab1 >.title{left:0%;top:auto;bottom:0%;transition:all 1500ms ease;}
+#tab1:checked~.tab1 >.title{left:0%;top:auto;bottom:0%;width:95%;}
 
 #tab2:checked~.tab2{left:0%}
-#tab2:checked~.tab2 >.title{top:20px;transition:all 1500ms ease;}
+/*#tab2:checked~.tab2 >.title{top:20px;transition:all 1500ms ease;}*/
 
 #tab3:checked~.tab3{left:0%}
-#tab3:checked~.tab3 >.title{top:20px;transition:all 1500ms ease;}
+/*#tab3:checked~.tab3 >.title{top:20px;transition:all 1500ms ease;}*/
 
 #tab4:checked~.tab4{left:0%}
-#tab4:checked~.tab4 >.title{top:20px;transition:all 1500ms ease;}
+/*#tab4:checked~.tab4 >.title{top:20px;transition:all 1500ms ease;}*/
 
 /*** ID ***/
 #TimerTitle{
 	text-align:center;
 	position:relative;
-	top:0%;
+	top:20%;
 	font-size:50px;
-	color:#fff;
 }
 
 #indexLogo{
 	position:relative;
-	top:10%;
-	left:35%;
-	width:30%;
+	top:20%;
+	left:40%;
+	width:20%;
 	height:auto;
 	display:block
 }
 /* tab2 */
 #tab2_Content{
 	width:70%;
-	height:60%;
+	height:calc(100% - 170px);
 	left:15%;
-	top:20%;
+	top:80px;
 	overflow:auto;
 	font-size:30px;
 	position:relative;
 	padding:40px 20px;
 	text-align:center;
-	background:rgba(0,0,0,0.6);
-	border-radius:2px;
-	box-shadow:0px 0px 0px 10px rgba(0,0,0,0.6);
-	color:white;
+	background:rgba(255,255,255,0.7);
+	box-shadow:0px 0px 0px 10px rgba(255,255,255,0.7);
+	color:black;
 }
 .td_title{
-	font-size:25px;padding-right:25px;color:#fff;
+	font-size:25px;padding-right:25px;color:#000;
 }
 .td_text{
-	font-size:16px;padding-right:25px;line-height:32px;text-align:left;
+	font-size:16px;padding-right:25px;line-height:32px;
 }
 
 /* tab3 */
 #tab3_Content{
 	width:70%;
-	height:60%;
+height:calc(100% - 170px);
 	left:15%;
-	top:20%;
+	top:80px;
 	overflow:auto;
 	font-size:30px;
 	position:relative;
 	padding:40px 20px;
 	text-align:center;
 	background:rgba(0,0,0,0.5);
-	border-radius:2px;
 	border-style:none;
 	box-shadow:0px 0px 0px 10px rgba(0,0,0,0.5);
 	color:white;
@@ -195,6 +191,7 @@ input[type="radio"]{display:none}
 }
 
 .tab3_text{
+vertical-align:text-top;
 	font-size:18px;
 	line-height:45px;
 }
@@ -212,19 +209,18 @@ input[type="radio"]{display:none}
 /* tab4 */
 #tab4_Content{
 	width:70%;
-	height:60%;
+height:calc(100% - 170px);
 	left:15%;
-	top:20%;
+	top:80px;
 	overflow:auto;
 	font-size:30px;
 	position:relative;
 	padding:40px 20px;
 	text-align:center;
-	background:rgba(0,0,0,0.5);
-	border-radius:2px;
+	background:rgba(255,255,255,0.7);
 	border-style:none;
-	box-shadow:0px 0px 0px 10px rgba(0,0,0,0.5);
-	color:white;
+	box-shadow:0px 0px 0px 10px rgba(255,255,255,0.7);
+	color:black;
 
 }
 
